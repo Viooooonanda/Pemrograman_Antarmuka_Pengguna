@@ -2,7 +2,7 @@ body{
     margin: 0;
     font-family: 'Segoe UI', Tohama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f4;
-    color: #333;
+    color: #777;
 }
 
 header{
@@ -15,7 +15,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Jarak antara foto dan teks */
+    gap: 30px; /* Jarak antara foto dan teks */
     max-width: 800px;
     margin: 0 auto;
 }
@@ -47,13 +47,12 @@ header{
 nav {
     padding: 12px;
     text-align: center;
-    background: #111;
+    background: #2a5298;
 }
 
 nav a:hover{
-    color: #00adb5;
+    color: #fff;
 }
-
 
 article{
     padding: 40px;
