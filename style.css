@@ -1,16 +1,17 @@
-body{
+body {
     margin: 0;
-    font-family: 'Segoe UI', Tohama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f4;
     color: #777;
 }
 
-header{
+header {
     padding: 30px;
     text-align: center;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
 }
+
 .header-content {
     display: flex;
     align-items: center;
@@ -20,18 +21,26 @@ header{
     margin: 0 auto;
 }
 
-/* Mengatur bentuk dan ukuran foto profil */
-.profile-img {
+/* Foto profil di header */
+.header-content .profile-img {
     width: 90px;
     height: 90px;
     border-radius: 50%; /* Membuat foto berbentuk lingkaran */
     object-fit: cover;
-    border: 3px solid #ffffff; /* Border putih mengelilingi foto */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid hsl(321, 90%, 77%);
+    box-shadow: 0 4px 10px #f5afaf33;
+}
+
+/* Foto profil di section Profile */
+#profile-section .profile-img {
+    display: none; /* disembunyikan dulu */
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .header-text {
-    text-align: left; /* Teks rata kiri di sebelah foto */
+    text-align: left;
 }
 
 .header-text h1 {
@@ -50,20 +59,26 @@ nav {
     background: #2a5298;
 }
 
-nav a:hover{
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
     color: #fff;
 }
 
-article{
+article {
     padding: 40px;
     max-width: 800px;
     margin: 30px auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* perbaikan */
 }
 
-footer{
+footer {
     padding: 15px;
     text-align: center;
     background: #222;

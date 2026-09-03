@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Mahasiswa</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Awalnya sembunyikan bagian profil */
+        #profile-section {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="vionanda.jpg" alt="Foto Profil" class="profile-img">
+            <img src="C:\Users\Hp\OneDrive\Documents\SEM 3\PEMROGRAMAN ANTARMUKA PENGGUNA\GitVionanda\vionanda.jpg" alt="Foto Profil" class="profile-img">
             <div class="header-text">
                 <h1>Profil Mahasiswa</h1>
                 <p>Selamat datang di portofolio saya</p>
@@ -18,40 +24,72 @@
     </header>
 
     <nav>
-        <a href="#" onclick="alert('Yey!')">Home</a>
-        <a href="#" onclick="alert('Yey!')">Profile</a>
-        <a href="#" onclick="alert('Yey!')">Contact</a>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('profile')">Profile</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
 
-    <article>
-        <h2>Data Diri</h2>
+    <!-- Bagian Home -->
+    <article id="home-section">
+        <h2>Selamat Datang</h2>
+        <p>Ini adalah halaman utama portofolio saya.</p>
+    </article>
+
+    <!-- Bagian Profile -->
+    <article id="profile-section">
+        <h2>Data Diri</h2> 
         <p><strong>Nama:</strong> Vionanda Ginting</p>
         <p><strong>Fakultas:</strong> Teknologi Informasi</p>
         <p><strong>Program Studi:</strong> Sistem Informasi</p>
+        <img src="C:\Users\Hp\OneDrive\Documents\SEM 3\PEMROGRAMAN ANTARMUKA PENGGUNA\GitVionanda\vionanda.jpg" alt="Foto Profil" class="profile-img">
         <p><strong>Deskripsi singkat:</strong></p>
         <p style="text-align: justify;">
-            Aku Vionanda, seorang mahasiswa semester 3 yang saat ini sedang berjuang menuntaskan mata kuliah 
-            Pemrograman Antarmuka Pengguna.Saat ini, aku fokus membangun situs web portofolio profil mahasiswa 
-            menggunakan HTML dan CSS Flexbox untuk menciptakan tampilan web yang rapi, mulai dari tata letak header, navigasi, 
-            hingga foto profilku sendiri.Dalam pengerjaan proyek ini, aku terbiasa menggunakan VS Code dan 
-            Git Bash untuk mengelola repositori kodenya langsung ke GitHub. Walaupun sempat diuji dengan 
-            berbagai error Git yang cukup memusingkan—mulai dari kendala submodule, unrelated histories, 
-            sampai push rejection—aku tipe orang yang pantang menyerah. Aku bakal terus mencoba dan mencari 
-            solusi step-by-step sampai kodenya benar-benar berhasil terisi dan jalan dengan sempurna. </p>
-        <p><strong>Link Repository Github</strong> <a href="https://github.com/Viooooonanda/Pemrograman_Antarmuka_Pengguna" 
-            target="_blank">Kunjungi GitHub Saya</a></p>
-            
+            Aku Vionanda, seorang mahasiswa semester 3 yang saat ini sedang berjuang menuntaskan mata kuliah Pemrograman Antarmuka Pengguna. 
+            Saat ini, aku fokus membangun situs web portofolio profil mahasiswa menggunakan HTML dan CSS Flexbox untuk menciptakan tampilan 
+            web yang rapi, mulai dari tata letak header, navigasi hingga foto profilku sendiri.Dalam pengerjaan proyek ini, aku terbiasa menggunakan 
+            VS Code dan Git Bash untuk mengelola repositori kodenya langsung ke GitHub. Walaupun sempat diuji dengan berbagai error Git yang 
+            cukup memusingkan—mulai dari kendala submodule, unrelated histories,sampai push rejection—aku tipe orang yang pantang menyerah. 
+            Aku bakal terus mencoba dan mencari solusi step-by-step sampai kodenya benar-benar berhasil terisi dan jalan dengan sempurna. </p>
+        <p><strong>Link Repository Github:</strong> 
+            <a href="https://github.com/Viooooonanda/Pemrograman_Antarmuka_Pengguna" target="_blank">
+                Kunjungi GitHub Saya
+            </a>
+        </p>
+
         <h3>Keahlian & Minat</h3>
-        <ul>
+         <ul>
             <li>Technical Problem Solving</li>
             <li>Essential Developer Tools</li>
             <li>Core Interest Potential</li>
         </ul>
+    </article>
 
+    <!-- Bagian Contact -->
+    <article id="contact-section" style="display:none;">
+        <h2>Kontak</h2>
+        <p>Email: vionanda.825250018@stu.untar.ac.id</p>
     </article>
 
     <footer>
         <p>&copy; 2026 Vionanda Ginting</p>
     </footer>
+
+    <script>
+        function showSection(section) {
+            // sembunyikan semua
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('profile-section').style.display = 'none';
+            document.getElementById('contact-section').style.display = 'none';
+
+            // tampilkan sesuai pilihan
+            if(section === 'home') {
+                document.getElementById('home-section').style.display = 'block';
+            } else if(section === 'profile') {
+                document.getElementById('profile-section').style.display = 'block';
+            } else if(section === 'contact') {
+                document.getElementById('contact-section').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
